@@ -6,13 +6,11 @@
       var selector = $(this).data("selector");
 
       $(selector).toggleClass("show").find(".search-input").focus();
-      // $(selector).find('.autocomplete').focus();
       $(this).toggleClass("active");
 
       e.preventDefault();
     });
 
-    // close when click off of container
     $(document).on("click touchstart", function (e) {
       if (!$(e.target).is(".search-toggle, .search-toggle *, .navbar, .navbar *")) {
         $(".search-toggle").removeClass("active");
@@ -50,9 +48,6 @@
               slidesToScroll: 1,
             },
           },
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
         ],
       });
     });
@@ -68,7 +63,6 @@
       });
     });
 
-    // image link in post content
     $(".magnific-popup").each(function () {
       $(".magnific-popup").magnificPopup({
         type: "image",
@@ -78,5 +72,4 @@
       });
     });
   });
-  // document ready
 })(jQuery);
