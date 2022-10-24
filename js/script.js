@@ -1,6 +1,5 @@
 (function ($) {
   "use strict";
-
   $(document).ready(function () {
     $(".navbar").on("click", ".search-toggle", function (e) {
       var selector = $(this).data("selector");
@@ -10,14 +9,12 @@
 
       e.preventDefault();
     });
-
     $(document).on("click touchstart", function (e) {
       if (!$(e.target).is(".search-toggle, .search-toggle *, .navbar, .navbar *")) {
         $(".search-toggle").removeClass("active");
         $(".navbar").removeClass("show");
       }
     });
-
     $(".main-slider").each(function () {
       $(".main-slider").slick({
         autoplay: false,
@@ -25,7 +22,6 @@
         arrows: true,
       });
     });
-
     $(".products-slider").each(function () {
       $(".products-slider").slick({
         slidesToShow: 4,
@@ -51,7 +47,6 @@
         ],
       });
     });
-
     $(".testimonial-slider").each(function () {
       $(".testimonial-slider").slick({
         dots: true,
@@ -62,7 +57,6 @@
         cssEase: "linear",
       });
     });
-
     $(".magnific-popup").each(function () {
       $(".magnific-popup").magnificPopup({
         type: "image",
